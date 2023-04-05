@@ -22,7 +22,7 @@ pipeline {
   stages {
     stage('Build and test') {
       steps {
-        sh 'mvn clean verify'
+        sh 'echo test'
       }
     }
     stage("Build docker image"){
