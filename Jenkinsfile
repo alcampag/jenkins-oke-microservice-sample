@@ -2,7 +2,6 @@ pipeline {
   agent {
     kubernetes {
       cloud 'kubernetes'
-      defaultContainer 'maven'
       inheritFrom 'agent-0'
     }
   }
