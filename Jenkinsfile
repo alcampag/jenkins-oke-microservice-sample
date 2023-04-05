@@ -11,15 +11,7 @@ pipeline {
           containers:
           - name: docker
             image: docker:20.10.22-dind
-            securityContext:
-                privileged: true
             tty: true
-            volumeMounts:
-             - mountPath: /var/lib/docker
-               name: docker-graph-storage
-          volumes:
-          - name: docker-graph-storage
-            emptyDir: {}
               '''
     }
   }
