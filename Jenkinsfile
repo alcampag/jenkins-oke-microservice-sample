@@ -20,6 +20,10 @@ pipeline {
           volumes:
           - name: docker-graph-storage
             emptyDir: {}
+          tolerations:
+            - key: "oci.oraclecloud.com/oke-is-preemptible"
+              operator: "Exists"
+              effect: "PreferNoSchedule"
               '''
     }
   }
