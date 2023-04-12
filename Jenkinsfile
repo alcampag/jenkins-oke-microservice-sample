@@ -22,8 +22,9 @@ pipeline {
             emptyDir: {}
           tolerations:
             - key: "oci.oraclecloud.com/oke-is-preemptible"
-              operator: "Exists"
-              effect: "PreferNoSchedule"
+              operator: "Equal"
+              value: ""
+              effect: "NoSchedule"
               '''
     }
   }
